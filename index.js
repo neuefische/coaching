@@ -3,7 +3,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const modal = require("./feedback/modal");
 const { sendFeedback } = require("./feedback/coda");
-const { generatePDF } = require("./certificate/pdf");
 
 const app = express();
 const port = 3000;
