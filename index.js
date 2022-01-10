@@ -15,14 +15,6 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/pdf", (req, res) => {
-  const { name } = req.query;
-  if (!name) {
-    return res.status(400).end("Invalid query");
-  }
-  generatePDF({ name }, res);
-});
-
 app.post("/slack/feedback/modal", async (req, res) => {
   try {
     const payload = JSON.parse(req.body.payload);
